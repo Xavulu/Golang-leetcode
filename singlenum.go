@@ -12,7 +12,7 @@ func singleNumber(nums []int) int {
     for i := range nums { result ^= nums[i]} //XOR out all the paired numbers with ^=  
     
     return result
-}// has a O(n) runtme (linear) as per task request
+}// has a O(n) runtime (linear) as per task request
 
 func main() {
 
