@@ -4,6 +4,7 @@ import (
 	"fmt"
 )
 
+//total time complexity is O(n) as we are iterating through array and adding missing values to map
 
 func twoSum(nums []int, target int) []int { //returns the array index
     
@@ -12,12 +13,12 @@ func twoSum(nums []int, target int) []int { //returns the array index
     
     for i := 0; i < len(nums); i++ { 
         
-        if compliment, ok := numMap[target - nums[i]]; ok { 
+	    if compliment, ok := numMap[target - nums[i]]; ok { //checking hashmap is O(1) time 
             
             return []int {compliment, i}
  
         }
-        numMap[nums[i]] = i
+	    numMap[nums[i]] = i // iterating through array and storing elements inhashmap is O(n)
     }
     
     return []int{0,0}
